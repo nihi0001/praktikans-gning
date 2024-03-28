@@ -1,5 +1,9 @@
 ---
 import "../global.css";
+import Nav from "../components/Nav.astro";
+import Contact from "../components/Contact.astro";
+
+
 
 ---
 
@@ -33,7 +37,12 @@ import "../global.css";
 	</head>
 	<main>
 	<body>
+		<Nav/>
+
 		<slot />
+		      <!-- slot er alt indhold fra pages -->
+
+			  <Contact/>
 	</body>
 </main>
 </html>

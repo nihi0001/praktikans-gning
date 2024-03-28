@@ -1,0 +1,151 @@
+<main>
+    <section class="full">
+      <header>
+        <h3>Fun facts om mig</h3>
+        <!--<p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </p> -->
+      </header>
+  
+      <ul role="list">
+        <li>
+          <h3>Fun fact #1</h3>
+          <p> Søndag er min yndlingsdag, og dagen hvor jeg er allermest produktiv
+          </p>
+        </li>
+  
+        <li>
+          <h3>Fun fact #2</h3>
+          <p>Hvis jeg ikke blev optaget på multimediedesign studiet, ville jeg gerne have sægt ind i politiet.
+          </p>
+        </li>
+  
+        <li>
+          <h3>Fun fact #3</h3>
+          <p>Jeg elsker at gå til koncerter!
+          </p>
+        </li>
+  
+        <li>
+          <h3>Fun fact #4</h3>
+          <p>Jeg bryder mig ikke om kaffe, men byd mig gerne på en chai
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  
+  <style>
+    :root {
+      --content-width: 50rem;
+    }
+  
+    /*ul:has(> li:nth-child(2)) li:nth-child(2) {
+      background: var(--black-color);
+      color:var(--white-color);
+  
+      h3{
+        color: var(--white-color);
+  
+      }
+    }*/
+   
+  
+    main {
+      padding-block: 4rem;
+      display: grid;
+      grid:
+        auto /
+        [full-start]
+        1fr
+        [content]
+        minmax(0, var(--content-width))
+        1fr
+        [full-end];
+      column-gap: 1rem;
+  
+      > * {
+        grid-column: 2;
+      }
+  
+      .full {
+        grid-column: 1 / -1;
+        display: grid;
+        grid: auto / subgrid;
+        /*row-gap: 3rem;*/
+  
+        > * {
+          grid-column: 2;
+        }
+  
+        > ul {
+          scroll-snap-type: x mandatory;
+          grid-column: 1 / -1;
+          padding-inline: max(1rem, 50% - var(--content-width) / 2);
+          padding-block-end: 1rem;
+  
+          li {
+            scroll-snap-align: center;
+          }
+        }
+      }
+    }
+  
+    ul {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      list-style-type: none;
+  
+      li {
+        flex-basis: min(400px, 90%);
+        flex-shrink: 0;
+        background: #fee2e2;
+        color: #000000;
+        border-radius: 8px;
+        font-size: 1rem;
+        padding: 2.75rem 2.1875rem;
+        align-self: start;
+  
+        h3 {
+          font-weight: 700;
+          font-size: 1.5625rem;
+        }
+      }
+    }
+  
+    h2,
+    h3 {
+      /*all: revert;*/
+      color: #181818;
+      /*margin-block: 0 0.625rem;*/
+      /*line-height: 1.125;*/
+      font-family: "raleway";
+    }
+  
+    h2 {
+      /*font-size: 2.8125rem;*/
+      text-transform: uppercase;
+    }
+  
+    header {
+      /*color: #595566;*/
+      margin-top: 1rem;
+      /*margin-inline: auto;*/
+      max-width: 700px;
+    padding: 25px;
+  
+  
+      p {
+        /*max-inline-size: 67ch;*/
+        font-family: "raleway";
+
+      }
+    }
+  
+ 
+  </style>
+  

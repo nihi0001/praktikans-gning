@@ -34,15 +34,23 @@ h2{
 
 }
 
+h3{
+    font-family: "raleway"; 
+    color: #dc2626;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+
+}
+
 p{
     font-family: "raleway";
     font-weight: 500;
     font-size: 1rem;
-    line-height: 1.475rem;
+    /*line-height: 1.475rem;*/
+    line-height: 1.57rem;
 
-
-
- 
 }
 
 body {

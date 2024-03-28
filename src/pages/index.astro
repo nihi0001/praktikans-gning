@@ -1,10 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
+import Scrollingcontainer from "../components/Scrollingcontainer.astro";
+
 ---
 
 <Layout>
-  <Nav />
 
   <div class="container">
     <section>
@@ -24,17 +24,33 @@ import Nav from "../components/Nav.astro";
       </p>
     </section>
 
-	<div>
-		<button>Se mine projekter</button>
+	<div class="knapContainer">
+    <section><button>Se mine projekter</button>
+    </section><button>Se mit CV</button><section>
 	</div>
+
+  <h3 class="praktik">Praktik forventninger</h3>
+  <div class="imgContainer">
+    <section>
+      <p>I løbet af min uddannelse har jeg udviklet en større interesse inden for digitalt design, UI/UX og frontendudvikling. Jeg håber på at lande en praktikplads, der understøtter et sundt og positivt teammiljø, men som også giver mig mulighed for at bidrage aktivt til projektarbejdet og deltage i skabelsen af digitale løsninger.</p>
+      <p class="pBottom">Jeg søger en praktikplads med en periode på 10 uger og opstart slut august/start september.</p>
+    </section>
+    <section><img src="/portræt-kopi.webp" alt=""></section>
   </div>
+
+
+
+  </div>
+  <Scrollingcontainer/>
+
 </Layout>
 
 <style>
   .container {
     margin-inline: auto;
-    max-width: 700px;
+    max-width: 750px;
     padding: 25px;
+    margin-top: 1rem;
   }
 
   .indexp{
@@ -43,17 +59,52 @@ import Nav from "../components/Nav.astro";
 
   }
 
+  .knapContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+
   button{
 	margin-top: 1rem;
 	border: none;
-	background-color: #dc2626;
+	/*background-color: #dc2626;*/
+  background-color: #ef4444;
 	color: #e0f2fe;
 	font-size: 1rem;
 	border-radius: 2.625rem;
-	padding: 1rem 5.8125rem;
+	/*padding: 1rem 5.8125rem;*/
+  font-weight: 500;
+  width: 20rem;
+  padding: 15px;
+  }
+
+  button:hover{
+  background-color: #e0f2fe;
+	color: #ef4444;
+  }
+
+  .imgContainer{
+    margin-inline: auto;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
 
 
-	
+  }
+  img{
+    height: auto;
+    width: 280px;
+    border-radius: 2.625rem;
+  }
 
+  .pBottom{
+    font-weight: 600;
+  }
+
+  .praktik{
+    text-transform: uppercase;
+    margin-top: 2rem;
   }
 </style>
