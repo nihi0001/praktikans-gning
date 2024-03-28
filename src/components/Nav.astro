@@ -1,0 +1,73 @@
+<div class="navbar">
+    <a href="/">Profil</a>
+    <a href="/">Projekter</a>
+    <a href="/cv">CV</a>
+    <a href="https://www.linkedin.com/in/nina-grandil-hildebrandt-712525171" aria-label="LinkedIn">
+        <img src="/linkedin-kopi.svg" alt="" class="logo" id="linkedin-icon"/>
+    </a>
+  </div>
+  
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 15px;
+      margin-right: 2rem;
+      margin-top: 1rem;
+    }
+  
+    .logo {
+      width: 40px;
+      height: auto;
+      /*margin-left: 8px;*/
+    }
+  
+  
+    a {
+      text-decoration: none;
+      color: rgb(0, 0, 0); 
+      color: #b91c1c;    
+text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 500;
+      /*font-family: "Poppins", sans-serif;*/
+      font-family: "Raleway";
+      font-family: "Arimo";
+
+
+      
+      margin-right: 40px;
+      /*text-transform: uppercase;*/
+    }
+  
+   /* @media screen and (min-width: 600px) {
+  
+      .navbar {
+      margin-right: 2rem;
+      }
+  
+      .logo {
+      margin-left: 2rem;
+  
+    }
+      
+      }*/
+  </style>
+  
+  <script>
+  
+      document.addEventListener('DOMContentLoaded', function(){
+      const linkedinIcon = document.getElementById('linkedin-icon');
+  
+      linkedinIcon.addEventListener('mouseover', () => {
+    document.body.style.backgroundColor = '#0077b5';
+  });
+  
+  linkedinIcon.addEventListener('mouseleave', () => {
+    document.body.style.backgroundColor = '#F2F1E6';
+  });
+  
+  });
+  </script>
+  
