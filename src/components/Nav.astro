@@ -1,6 +1,6 @@
 <div class="navbar">
     <a href="/">Profil</a>
-    <a href="/">Projekter</a>
+    <a href="/projekter">Projekter</a>
     <a href="/cv">CV</a>
     <a href="https://www.linkedin.com/in/nina-grandil-hildebrandt-712525171" aria-label="LinkedIn">
         <img src="/linkedin-kopi.svg" alt="" class="logo" id="linkedin-icon"/>
@@ -8,6 +8,11 @@
   </div>
   
   <style>
+
+a.active {
+    font-weight: bold;
+    color: #0077b5; /* Skift farven efter behov */
+}
     .navbar {
       display: flex;
       justify-content: flex-end;
@@ -69,5 +74,21 @@ text-transform: uppercase;
   });
   
   });
+
+  document.addEventListener('DOMContentLoaded', function(){
+        // Find den aktuelle URL
+        var currentUrl = window.location.href;
+
+        // Find alle links i navigationsmenuen
+        var navLinks = document.querySelectorAll('.navbar a');
+
+        // Loop gennem links og tilføj aktiv klasse til det link, der matcher den aktuelle URL
+        navLinks.forEach(function(link) {
+            // Sammenlign URL'en uden sidst '/' for at undgå unødvendige forskelle
+            if (link.href.replace(/\/$/, '') === currentUrl.replace(/\/$/, '')) {
+                link.classList.add('active');
+            }
+        });
+    });
   </script>
   
