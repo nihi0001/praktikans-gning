@@ -38,10 +38,8 @@ import Scrollingcontainer from "../components/Scrollingcontainer.astro";
     <section><img src="/portræt-kopi.webp" alt=""></section>
   </div>
 
-
-
-  </div>
   <h3 class="facts">Fun facts om mig</h3>
+  </div>
 
   <Scrollingcontainer/>
 
@@ -64,7 +62,8 @@ import Scrollingcontainer from "../components/Scrollingcontainer.astro";
   .knapContainer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    gap: 1rem;
+    margin-bottom: 4rem;
   }
 
   button{
@@ -111,7 +110,6 @@ import Scrollingcontainer from "../components/Scrollingcontainer.astro";
   }
 
   .facts{
-    margin-inline: auto;
-    max-width: 750px;
+margin-top: 4rem;
   }
 </style>

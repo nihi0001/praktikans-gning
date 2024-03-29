@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="container">
+    <h1>Projekter</h1>
+    <p>
+      Under mit andet semester på multimediedesignuddannelsen på KEA har jeg
+      sammen med min studiegruppe arbejdet på diverse projekter, herunder
+      redesigns for UX Copenhagen og VahlWood samt udviklingen af en kampagne
+      for CA a-kasse. Vores tilgang til opgaverne startede med en grundig
+      analyse af målgruppen for at opnå en dybere forståelse af deres behov og
+      indsamle vigtige indsigter. Derefter igangsatte vi designprocessen ved at
+      skabe en prototype i Figma, hvor løbende test og tilpasninger blev
+      foretaget. Afslutningsvis implementerede vi vores færdigheder inden for
+      HTML, CSS og JavaScript til at kode de endelige websites. Projekterne har
+      derfor givet mig erfaring med værktøjer som Git, GitHub, Astro, Netlify,
+      Figma og Adobe-pakken.
+    </p>
+
+    <div class="grid">
+      <div class="row">
+        <div class="image"><img src="/ux-kopi.webp" alt=""/></div>
+        <div class="text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quas animi ad autem quasi laudantium temporibus debitis quis
+            voluptatum reiciendis, error expedita placeat voluptate dolorum
+            fugit maxime, ab eveniet minima!
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quaerat blanditiis aut eius voluptas perferendis, natus quod eos repellat saepe cupiditate suscipit nam impedit id optio totam. Dicta, quidem vitae!</p>
+        </div>
+        <div class="image">
+          <img src="/ca-kopi.webp" alt="Billede 2" />
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="image">
+          <img src="/vahlwood-kopi.webp" alt="Billede 3" />
+        </div>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatem, odit cupiditate expedita laudantium voluptatum harum adipisci sapiente at ipsam illo cumque quo facilis, eos possimus rerum atque non error!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    margin-inline: auto;
+    max-width: 750px;
+    padding: 25px;
+    margin-top: 1rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-top: 5rem;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px; /* Afstand mellem rækker */
+  }
+
+  .image,
+  .text {
+    flex: 1;
+    padding: 10px; /* Tilpas efter behov */
+  }
+
+  .image img {
+    width: 300px; /* Sørg for, at billedet ikke overstiger kolonnens bredde */
+    height: 100%;
+  }
+
+  .reverse {
+    flex-direction: row-reverse; /* Omvendt rækkefølge af kolonner */
+  }
+</style>
