@@ -4,53 +4,51 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <div class="container">
+    <div class="top">
     <h1>Projekter</h1>
     <p>
       Under mit andet semester på multimediedesignuddannelsen på KEA har jeg
       sammen med min studiegruppe arbejdet på diverse projekter, herunder
       redesigns for UX Copenhagen og VahlWood samt udviklingen af en kampagne
-      for CA a-kasse. Vores tilgang til opgaverne startede med en grundig
+      for CA a-kasse.
+    </p>
+
+    <p> Vores tilgang til opgaverne startede med en grundig
       analyse af målgruppen for at opnå en dybere forståelse af deres behov og
       indsamle vigtige indsigter. Derefter igangsatte vi designprocessen ved at
       skabe en prototype i Figma, hvor løbende test og tilpasninger blev
       foretaget. Afslutningsvis implementerede vi vores færdigheder inden for
       HTML, CSS og JavaScript til at kode de endelige websites. Projekterne har
       derfor givet mig erfaring med værktøjer som Git, GitHub, Astro, Netlify,
-      Figma og Adobe-pakken.
-    </p>
+      Figma og Adobe-pakken.</p>
+  </div>
 
-    <div class="grid">
-      <div class="row">
-        <div class="image"><img src="/ux-kopi.webp" alt=""/></div>
-        <div class="text">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quas animi ad autem quasi laudantium temporibus debitis quis
-            voluptatum reiciendis, error expedita placeat voluptate dolorum
-            fugit maxime, ab eveniet minima!
-          </p>
-        </div>
+    <section id="first-section">
+      <article><img src="/ux-kopi.webp" alt="">
+        <div>
+        <h3>UX Copenhagen</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eius reiciendis voluptatem nobis laudantium modi aliquid, a eum odit unde omnis quas dignissimos, eveniet consectetur itaque illum amet illo esse!</p>
+          <button>Se løsningen</button>
       </div>
+    </article>
 
-      <div class="row">
-        <div class="text">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quaerat blanditiis aut eius voluptas perferendis, natus quod eos repellat saepe cupiditate suscipit nam impedit id optio totam. Dicta, quidem vitae!</p>
-        </div>
-        <div class="image">
-          <img src="/ca-kopi.webp" alt="Billede 2" />
-        </div>
-        
-      </div>
+      <article><img src="/ca-kopi.webp" alt="">
+          <div><h3>CA Akasse</h3>
 
-      <div class="row">
-        <div class="image">
-          <img src="/vahlwood-kopi.webp" alt="Billede 3" />
-        </div>
-        <div class="text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatem, odit cupiditate expedita laudantium voluptatum harum adipisci sapiente at ipsam illo cumque quo facilis, eos possimus rerum atque non error!</p>
-        </div>
-      </div>
-    </div>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ducimus ratione dolore porro sit debitis recusandae dolor, laudantium ipsam quo eos, assumenda rem placeat atque, sapiente pariatur illo. Libero, quasi?</p>
+              <button>Se løsningen</button>
+
+          </div>
+      </article>
+
+      <article><img src="/vahlwood-kopi.webp" alt=""><div>
+        <h3>Vahl Wood</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eius reiciendis voluptatem nobis laudantium modi aliquid, a eum odit unde omnis quas dignissimos, eveniet consectetur itaque illum amet illo esse!</p>
+        <button>Se løsningen</button>
+
+    </div></article>
+  </section>
+
   </div>
 </Layout>
 
@@ -62,30 +60,66 @@ import Layout from "../layouts/Layout.astro";
     margin-top: 1rem;
   }
 
+  .top{
+    margin-bottom: 4rem;
+  }
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    margin-top: 5rem;
   }
 
-  .row {
-    display: flex;
-    width: 100%;
-    margin-bottom: 20px; /* Afstand mellem rækker */
-  }
+  article{
+    margin-top: 3rem;
+    gap: 4rem;
 
-  .image,
-  .text {
-    flex: 1;
-    padding: 10px; /* Tilpas efter behov */
   }
-
-  .image img {
-    width: 300px; /* Sørg for, at billedet ikke overstiger kolonnens bredde */
+  img {
+    width: 300px; 
     height: 100%;
   }
 
-  .reverse {
-    flex-direction: row-reverse; /* Omvendt rækkefølge af kolonner */
+  h3{
+    text-transform: uppercase;
   }
+
+  button{
+	margin-top: 1rem;
+	border: none;
+  background-color: #ef4444;
+	color: #e0f2fe;
+	font-size: 1rem;
+	border-radius: 2.625rem;
+  font-weight: 500;
+  width: 15rem;
+  padding: 15px;
+  }
+
+  button:hover{
+  background-color: #e0f2fe;
+	color: #ef4444;
+  }
+  #first-section article{
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+
+    }
+
+  /* Media queries larger screens*/
+@media  screen and (min-width:600px){
+    #first-section article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+    }
+  
+ #first-section article:nth-child(even) div{
+grid-column: 1 ;
+grid-row: 1;
+   
+}
+}
+
+
 </style>
