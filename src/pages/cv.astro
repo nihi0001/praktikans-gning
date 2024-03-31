@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <div class="container">
     <h1>CV</h1>
+    <h2 class="erfaringoverskrift">Erhvervs erfaring</h2>
     <div class="grid">
       <section class="col1">
         <h2>Selvstændig</h2>
@@ -70,6 +71,25 @@ import Layout from "../layouts/Layout.astro";
         <li>Leverede komplet assistance til restaurantchefen.</li>
       </section>
     </div>
+
+    <h2 class="uddoverskrift">Udannelse</h2>
+    
+<div class="grid">
+    <section class="col1">
+      <h3>KEA</h3>
+      <p>Multimediedesign</p>
+      <p class="arstal">2022 - 2024</p>
+    </section>
+
+    <section class="col2">
+      <h3>Niels Brock NVG</h3>
+      <p>HHX, markedsføring</p>
+      <p class="arstal">2017 - 2020</p>
+    </section>
+  </div>
+</div>
+</div>
+
   </div>
 </Layout>
 
@@ -100,12 +120,34 @@ import Layout from "../layouts/Layout.astro";
     font-weight: 600;
   }
 
+  .arstal{
+    font-weight: 500;
+  }
+
   .col1,
   .col2 {
     margin-top: 1rem;
     padding: 5px;
     margin-bottom: 2rem;
 
+  }
+
+  h1{
+    margin-bottom: 4rem;
+  }
+
+
+  .erfaringoverskrift, .uddoverskrift{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #27272a;
+    background-color:#fee2e2;
+    padding: 3px;
+    width: 13rem;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
   }
 
   @media screen and (max-width: 600px) {
@@ -118,10 +160,6 @@ import Layout from "../layouts/Layout.astro";
   .col2{
     margin-top: 0;
   }
-
-
-
-
 }
 
 
