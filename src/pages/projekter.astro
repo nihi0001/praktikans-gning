@@ -27,7 +27,7 @@ import Layout from "../layouts/Layout.astro";
       <article><img src="/ux-kopi.webp" alt="">
         <div>
         <h3>UX Copenhagen</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eius reiciendis voluptatem nobis laudantium modi aliquid, a eum odit unde omnis quas dignissimos, eveniet consectetur itaque illum amet illo esse!</p>
+          <p class="tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eius reiciendis voluptatem nobis laudantium modi aliquid, a eum odit unde omnis quas dignissimos, eveniet consectetur itaque illum amet illo esse!</p>
           <button>Se løsningen</button>
       </div>
     </article>
@@ -80,10 +80,14 @@ import Layout from "../layouts/Layout.astro";
 
   }
 
-  .topp{
-    /*font-weight: 600;*/
-    color: #ef4444;
+  .tekst{
+    max-width: 48ch;
   }
+
+  /*.topp{
+    font-weight: 600;
+    color: #ef4444;
+  }*/
 
   h3{
     text-transform: uppercase;
