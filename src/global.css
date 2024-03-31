@@ -30,7 +30,7 @@ h2{
     color: #f87171;
     font-weight: 500;
     font-size: 1.8rem;
-    line-height: 2.5rem;
+    line-height: 2.3rem;
 
 }
 
@@ -50,6 +50,7 @@ p{
     font-size: 1rem;
     /*line-height: 1.475rem;*/
     line-height: 1.57rem;
+    color: #27272a;
 
 }
 
