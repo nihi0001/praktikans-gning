@@ -92,6 +92,12 @@ import Layout from "../layouts/Layout.astro";
     font-weight: 500;
     font-family: "raleway", serif;
     color: #27272a;
+    line-height: 1.57rem;
+
+  }
+
+  p{
+    font-weight: 600;
   }
 
   .col1,
@@ -101,6 +107,22 @@ import Layout from "../layouts/Layout.astro";
     margin-bottom: 2rem;
 
   }
+
+  @media screen and (max-width: 600px) {
+
+
+  .col1 {
+    margin-bottom: 0rem;
+  }
+
+  .col2{
+    margin-top: 0;
+  }
+
+
+
+
+}
 
 
 </style>
