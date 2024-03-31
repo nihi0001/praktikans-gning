@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
   <div class="container">
     <div class="top">
     <h1>Projekter</h1>
-    <p>
+    <p class="topp">
       Under mit andet semester på multimediedesignuddannelsen på KEA har jeg
       sammen med min studiegruppe arbejdet på diverse projekter, herunder
       redesigns for UX Copenhagen og VahlWood samt udviklingen af en kampagne
@@ -19,8 +19,8 @@ import Layout from "../layouts/Layout.astro";
       skabe en prototype i Figma, hvor løbende test og tilpasninger blev
       foretaget. Afslutningsvis implementerede vi vores færdigheder inden for
       HTML, CSS og JavaScript til at kode de endelige websites. Projekterne har
-      derfor givet mig erfaring med værktøjer som Git, GitHub, Astro, Netlify,
-      Figma og Adobe-pakken.</p>
+      derfor givet mig erfaring med værktøjer som <strong> Git, GitHub, Astro, Netlify,
+      Figma, supabase og Adobe-pakken.</strong></p>
   </div>
 
     <section id="first-section">
@@ -76,6 +76,13 @@ import Layout from "../layouts/Layout.astro";
   img {
     width: 300px; 
     height: 100%;
+    border-radius: 2rem;
+
+  }
+
+  .topp{
+    /*font-weight: 600;*/
+    color: #ef4444;
   }
 
   h3{
@@ -90,7 +97,7 @@ import Layout from "../layouts/Layout.astro";
 	font-size: 1rem;
 	border-radius: 2.625rem;
   font-weight: 500;
-  width: 15rem;
+  width: 20rem;
   padding: 15px;
   }
 

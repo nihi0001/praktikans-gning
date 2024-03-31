@@ -38,7 +38,7 @@ h3{
     font-family: "raleway"; 
     color: #dc2626;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 2.5rem;
     letter-spacing: 2px;
 
@@ -61,10 +61,21 @@ body {
     /*background: #fcf2ec;*/
     /*background: #f0f9ff;*/
     background: #e0f2fe;
-
-
-
 }
+
+@media screen and (max-width: 600px) {
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        line-height: 2rem;    
+    }
+
+
+  }
 
 
 
