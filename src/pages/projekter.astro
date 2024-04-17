@@ -5,53 +5,78 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <div class="container">
     <div class="top">
-    <h1>Projekter</h1>
-    <p class="topp">
-      Under mit andet semester på multimediedesignuddannelsen på KEA har jeg
-      sammen med min studiegruppe arbejdet på diverse projekter, herunder
-      redesigns for UX Copenhagen og VahlWood samt udviklingen af en kampagne
-      for CA A-kasse.
-    </p>
-
-    <p> Vi indledte opgaveprocessen med en målgruppeanalyse for at indsamle relevante indsigter. Derefter skabte vi prototyper i Figma, hvor vi kontinuerligt testede og tilpassede dem. Afslutningsvis implementerede vi vores færdigheder inden for
-      HTML, CSS og JavaScript til at kode de endelige websites.
+      <h1>Projekter</h1>
+      <p class="topp">
+        Under mit andet semester på multimediedesignuddannelsen på KEA har jeg
+        sammen med min studiegruppe arbejdet på diverse projekter, herunder
+        redesigns for UX Copenhagen og VahlWood samt udviklingen af en kampagne
+        for CA A-kasse.
       </p>
 
-      <p>Mine 2. semesters projekter og mit nuværende valgfag på 3. semester i frontend-udvikling har udvidet min erfaring med forskellige værktøjer og frameworks, herunder <strong class="highlight">Git, GitHub, Astro, Netlify, Vercel, Figma, Adobe-pakken, React, Vite, Next.js, Tailwind og Supabase.</strong>
-
-
-
-
+      <p>
+        Vi indledte opgaveprocessen med en målgruppeanalyse for at indsamle
+        relevante indsigter. Derefter skabte vi prototyper i Figma, hvor vi
+        kontinuerligt testede og tilpassede dem. Afslutningsvis implementerede
+        vi vores færdigheder inden for HTML, CSS og JavaScript til at kode de
+        endelige websites.
       </p>
-  </div>
+
+      <p>
+        Mine 2. semesters projekter og mit nuværende valgfag på 3. semester i
+        frontend-udvikling har udvidet min erfaring med forskellige værktøjer og
+        frameworks, herunder <strong class="highlight"
+          >Git, GitHub, Astro, Netlify, Vercel, Figma, Adobe-pakken, React,
+          Vite, Next.js, Tailwind og Supabase.</strong
+        >
+      </p>
+    </div>
 
     <section id="first-section">
-      <article><img src="/images/ux-kopi.webp" alt="">
+      <article>
+        <img src="/images/ux-kopi.webp" alt="" />
         <div>
-        <h3>UX Copenhagen</h3>
-          <p class="tekst">I samarbejde med UX Copenhagen har vi redesignet deres hjemmeside for at forbedre brugeroplevelsen og præsentationen af konferenceindholdet. Konferencen samler eksperter og fagfolk inden for UX og design fra hele verden for at diskutere de nyeste trends og bedste praksis.
+          <h3>UX Copenhagen</h3>
+          <p class="tekst">
+            I samarbejde med UX Copenhagen har vi redesignet deres hjemmeside
+            for at forbedre brugeroplevelsen og præsentationen af
+            konferenceindholdet. Konferencen samler eksperter og fagfolk inden
+            for UX og design fra hele verden for at diskutere de nyeste trends
+            og bedste praksis.
           </p>
-          <button>Se løsningen</button>
-      </div>
-    </article>
-
-      <article><img src="/images/ca-kopi.webp" alt="">
-          <div><h3>CA A-kasse</h3>
-              <p>Vi skabte et kampagnesite for en af CA A-kasses medlemsfordele, der fulgte deres brandidentitet og farveskema. Sitet blev designet til at være både informativt og engagerende, med det formål at tydeliggøre fordelene ved medlemskabet.
-              </p>
-              <button>Se løsningen</button>
-
-          </div>
+          <button><a href="https://regal-sable-07161b.netlify.app/">Se løsningen</a></button>
+        </div>
       </article>
 
-      <article><img src="/images/vahlwood-kopi.webp" alt=""><div>
-        <h3>Vahl Wood</h3>
-        <p>I vores eksamensprojekt fokuserede vi på at redesigne brandidentiteten for snedkervirksomheden Vahl Wood. Vi skabte et nyt visuelt udtryk, der bedre afspejlede deres håndværksmæssige dygtighed og æstetiske værdier. </p>
-        <button>Se løsningen</button>
+      <article>
+        <img src="/images/ca-kopi.webp" alt="" />
+        <div>
+          <h3>CA A-kasse</h3>
+          <p>
+            Vi skabte et kampagnesite for en af CA A-kasses medlemsfordele, der
+            fulgte deres brandidentitet og farveskema. Sitet blev designet til
+            at være både informativt og engagerende, med det formål at
+            tydeliggøre fordelene ved medlemskabet.
+          </p>
+          <button><a href="https://tema9.netlify.app/">Se løsningen</a></button>
+        </div>
+      </article>
 
-    </div></article>
-  </section>
-
+      <article>
+        <img src="/images/vahlwood-kopi.webp" alt="" /><div>
+          <h3>Vahl Wood</h3>
+          <p>
+            I vores eksamensprojekt fokuserede vi på at redesigne
+            brandidentiteten for snedkervirksomheden Vahl Wood. Vi skabte et nyt
+            visuelt udtryk, der bedre afspejlede deres håndværksmæssige
+            dygtighed og æstetiske værdier.
+          </p>
+          <button
+            ><a href="https://eksamensprojekt.netlify.app/">Se løsningen</a
+            ></button
+          >
+        </div>
+      </article>
+    </section>
   </div>
 </Layout>
 
@@ -63,7 +88,7 @@ import Layout from "../layouts/Layout.astro";
     margin-top: 1rem;
   }
 
-  .top{
+  .top {
     margin-bottom: 4rem;
   }
   .grid {
@@ -71,70 +96,67 @@ import Layout from "../layouts/Layout.astro";
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 
-  article{
+  article {
     margin-top: 3rem;
     gap: 4rem;
-
   }
   img {
-    width: 300px; 
+    width: 300px;
     height: auto;
     border-radius: 1.5rem;
-
   }
 
-  .tekst{
+  .tekst {
     max-width: 48ch;
   }
 
-  .topp{
+  .topp {
     font-weight: 400;
   }
 
-  h3{
+  h3 {
     text-transform: uppercase;
   }
 
-  button{
-	margin-top: 1rem;
-	border: none;
-  background-color: #ef4444;
-	color: #e0f2fe;
-	font-size: 1rem;
-	border-radius: 2.625rem;
-  font-weight: 500;
-  width: 20rem;
-  padding: 15px;
+  button {
+    margin-top: 1rem;
+    border: none;
+    background-color: #ef4444;
+    font-size: 1rem;
+    border-radius: 2.625rem;
+    font-weight: 500;
+    width: 20rem;
+    padding: 15px;
   }
 
-  button:hover{
+  button a{
+    color: #e0f2fe;
+    text-decoration: none;
+  }
+
+  button:hover {
     background-color: #ffa5a5;
   }
-  #first-section article{
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-    }
+  #first-section article {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
 
-    .highlight{
-      font-weight: 600;
-    }
+  .highlight {
+    font-weight: 600;
+  }
 
   /* Media queries larger screens*/
-@media  screen and (min-width:600px){
-    #first-section article{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-
+  @media screen and (min-width: 600px) {
+    #first-section article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
     }
-  
- #first-section article:nth-child(even) div{
-grid-column: 1 ;
-grid-row: 1;
-   
-}
-}
 
-
-
+    #first-section article:nth-child(even) div {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
 </style>
