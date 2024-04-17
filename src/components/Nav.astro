@@ -1,4 +1,5 @@
-<div class="navbar">
+<header class="navbar">
+  <nav class="web-nav">
   <a href="/">Profil</a>
   <a href="/projekter">Projekter</a>
   <a href="/cv">CV</a>
@@ -8,7 +9,24 @@
   >
     <img src="/images/linkedin-kopi.svg" alt="" class="logo" id="linkedin-icon" />
   </a>
-</div>
+</nav>
+  <button class="hamburger">
+    <div class="bar"></div>
+  </button>
+
+  <nav class="mobile-nav">
+    <a class="link" href="/">Profil</a>
+    <a class="link" href="/projekter">Projekter</a>
+    <a class="link" href="/cv">CV</a>
+    <a
+      href="https://www.linkedin.com/in/nina-grandil-hildebrandt-712525171"
+      aria-label="LinkedIn"
+    >
+      <img src="/images/linkedin-kopi.svg" alt="" class="logo" id="linkedin-icon" />
+    </a>
+  </nav>
+
+</header>
 
 <style>
   a.active {
@@ -42,6 +60,114 @@
   }
 
   
+
+/* Burger menu*/
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 40px;
+  cursor: pointer;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  margin: 5px -10px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  /*transform: rotate(-50deg) translate(-8px, 4px);*/
+  transform: rotate(-50deg) translate(-9px, 3px);
+  position: relative;
+  z-index: 100;
+}
+
+.hamburger.is-active:after {
+  /*transform: rotate(50deg) translate(-10px, -7px);*/
+  transform: rotate(50deg) translate(-7px, -4px);
+
+  position: relative;
+  z-index: 100;
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: #e0f2fe;
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 20px;
+  text-align: center;
+  padding: 12px 16px;
+	border-radius: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.mobile-nav a,link {
+  transition: transform 0.2 ease;
+}
+
+.mobile-nav a.link:hover {
+  background-color: #ffa5a5;
+}
+
+
+.link{
+  background-color: #ef4444;
+
+}
+
+/* media q for hamburger*/
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .web-nav {
+    display: none;
+  }
+}
+
+  
 @media screen and (max-width: 600px) {
 
   a {
@@ -52,13 +178,7 @@
     display: flex;
     justify-content: right;
     margin-top: 1rem;
-    margin-right: 0rem;
-  }
-
-  .logo {
-    width: 35px;
-  }
-
+    margin-right: 0rem;  }
 
 }
 </style>
@@ -91,4 +211,15 @@
       }
     });
   });
+
+
+  // burgermenu
+
+const menu_btn = document.querySelector(".hamburger");
+const mobile_menu = document.querySelector(".mobile-nav");
+
+menu_btn.addEventListener("click", function () {
+  menu_btn.classList.toggle("is-active");
+  mobile_menu.classList.toggle("is-active");
+});
 </script>
